@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" fill="none">
+  <!-- Background -->
+  <rect width="192" height="192" rx="40" fill="#5B4CFF"/>
+  
+  <!-- Brain/AI Icon -->
+  <g transform="translate(48, 48)">
+    <!-- Left hemisphere -->
+    <path d="M 32 20 Q 32 15 28 12 Q 24 10 20 12 Q 16 15 16 20 L 16 48 Q 16 58 24 64 L 32 64 Z" 
+          fill="#FFD700" opacity="0.9"/>
+    
+    <!-- Right hemisphere -->
+    <path d="M 64 20 Q 64 15 68 12 Q 72 10 76 12 Q 80 15 80 20 L 80 48 Q 80 58 72 64 L 64 64 Z" 
+          fill="#FFD700" opacity="0.9"/>
+    
+    <!-- Central connection -->
+    <rect x="32" y="30" width="32" height="12" rx="6" fill="#00D9FF"/>
+    
+    <!-- Neural nodes -->
+    <circle cx="24" cy="45" r="3" fill="#00D9FF"/>
+    <circle cx="40" cy="42" r="3" fill="#00D9FF"/>
+    <circle cx="56" cy="45" r="3" fill="#00D9FF"/>
+    <circle cx="72" cy="42" r="3" fill="#00D9FF"/>
+    
+    <!-- Connection lines -->
+    <line x1="24" y1="45" x2="40" y2="42" stroke="#00D9FF" stroke-width="1.5" opacity="0.6"/>
+    <line x1="40" y1="42" x2="56" y2="45" stroke="#00D9FF" stroke-width="1.5" opacity="0.6"/>
+    <line x1="56" y1="45" x2="72" y2="42" stroke="#00D9FF" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  
+  <!-- Book/Learning element at bottom -->
+  <g transform="translate(56, 120)">
+    <rect x="0" y="0" width="32" height="28" rx="3" fill="none" stroke="#FFD700" stroke-width="2.5"/>
+    <line x1="16" y1="0" x2="16" y2="28" stroke="#FFD700" stroke-width="2"/>
+    <line x1="4" y1="8" x2="12" y2="8" stroke="#00D9FF" stroke-width="1.5"/>
+    <line x1="4" y1="14" x2="12" y2="14" stroke="#00D9FF" stroke-width="1.5"/>
+    <line x1="20" y1="8" x2="28" y2="8" stroke="#00D9FF" stroke-width="1.5"/>
+    <line x1="20" y1="14" x2="28" y2="14" stroke="#00D9FF" stroke-width="1.5"/>
+  </g>
+</svg>

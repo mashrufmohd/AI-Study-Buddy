@@ -1,0 +1,52 @@
+# Environment Variables (SENSITIVE - Never commit)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+backend/.env
+.env.example
+
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.exe
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+ENV/
+env/
+.venv/
+.Python
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+

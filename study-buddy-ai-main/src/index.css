@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI Study Buddy Design System - Academic, Clean, Focused */
+
+@layer base {
+  :root {
+    /* Core Colors - Calm Indigo Academic Theme */
+    --background: 220 20% 98%;
+    --foreground: 224 71% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 10%;
+
+    /* Primary - Calm Indigo */
+    --primary: 234 89% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Soft Gray */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 71% 10%;
+
+    /* Muted - Light Background */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent - Soft Blue */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Feature Colors */
+    --explain: 234 89% 60%;
+    --explain-light: 234 89% 96%;
+    --summarize: 142 76% 46%;
+    --summarize-light: 142 76% 96%;
+    --quiz: 280 68% 58%;
+    --quiz-light: 280 68% 96%;
+    --flashcard: 24 95% 58%;
+    --flashcard-light: 24 95% 96%;
+
+    /* Status Colors */
+    --success: 142 76% 46%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 234 89% 60%;
+
+    --radius: 0.75rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(224 71% 10% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(224 71% 10% / 0.1), 0 2px 4px -2px hsl(224 71% 10% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(224 71% 10% / 0.1), 0 4px 6px -4px hsl(224 71% 10% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(224 71% 10% / 0.1), 0 8px 10px -6px hsl(224 71% 10% / 0.1);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 234 89% 60%;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 220 14% 96%;
+
+    --card: 224 71% 8%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 224 71% 8%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 234 89% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224 71% 12%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 224 71% 12%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 217 91% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 224 71% 15%;
+    --input: 224 71% 15%;
+    --ring: 234 89% 65%;
+
+    --sidebar-background: 224 71% 6%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 234 89% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 71% 12%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 224 71% 15%;
+    --sidebar-ring: 234 89% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Feature card variants */
+  .feature-explain {
+    @apply border-l-4;
+    border-left-color: hsl(var(--explain));
+  }
+  .feature-summarize {
+    @apply border-l-4;
+    border-left-color: hsl(var(--summarize));
+  }
+  .feature-quiz {
+    @apply border-l-4;
+    border-left-color: hsl(var(--quiz));
+  }
+  .feature-flashcard {
+    @apply border-l-4;
+    border-left-color: hsl(var(--flashcard));
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  /* Flashcard flip */
+  .flip-card {
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front,
+  .flip-card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  /* Pulse animation for loading */
+  .thinking-pulse {
+    animation: thinking 1.5s ease-in-out infinite;
+  }
+  @keyframes thinking {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  /* Smooth page transitions */
+  .page-enter {
+    animation: pageEnter 0.3s ease-out;
+  }
+  @keyframes pageEnter {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
